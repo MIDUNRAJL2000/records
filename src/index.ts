@@ -9,8 +9,6 @@ interface HasTimestamps {
 
 function addTimeStamps<T extends HasId>(temp:T): T{
     const timestamps = new Date();
-    (temp as T & HasTimestamps).createdAt = timestamps;
-    (temp as T & HasTimestamps).updatedAt = timestamps;
     return temp
 }
 interface Book {
